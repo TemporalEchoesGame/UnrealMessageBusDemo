@@ -5,21 +5,10 @@ using System.Collections.Generic;
 
 public class MessagingServerEditorTarget : TargetRules
 {
-	public MessagingServerEditorTarget(TargetInfo Target)
+	public MessagingServerEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-	}
-
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.Add("MessagingServer");
+		DefaultBuildSettings = BuildSettingsVersion.V2;
+		ExtraModuleNames.Add("MessagingServer");
 	}
 }

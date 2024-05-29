@@ -2,8 +2,8 @@
 
 #pragma once
 
+#include "MessageEndpoint.h"
 #include "Components/ActorComponent.h"
-#include "Messaging.h"
 #include "RemoteJumpTriggerComponent.generated.h"
 
 
@@ -23,7 +23,7 @@ public:
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 private:
-	FMessageEndpointPtr JumpEndpoint;
+	TSharedPtr<FMessageEndpoint, ESPMode::ThreadSafe> JumpEndpoint;
 
 public:
 	// blueprints should call this function to trigger a remote jump

@@ -3,11 +3,11 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class MessagingClientTarget : TargetRules
+public class MessagingClientEditorTarget : TargetRules
 {
-	public MessagingClientTarget(TargetInfo Target) : base(Target)
+	public MessagingClientEditorTarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Game;
+		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.Add("MessagingClient");
 	}

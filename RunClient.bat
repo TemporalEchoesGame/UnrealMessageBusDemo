@@ -1,0 +1,2 @@
+cd MessagingClient/Packages/Win64/WindowsNoEditor
+MessagingClient.exe -Messaging

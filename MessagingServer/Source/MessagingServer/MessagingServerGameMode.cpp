@@ -1,7 +1,7 @@
 // Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 
-#include "MessagingServer.h"
 #include "MessagingServerGameMode.h"
+#include "MessagingServer.h"
 #include "MessagingServerCharacter.h"
 
 AMessagingServerGameMode::AMessagingServerGameMode()

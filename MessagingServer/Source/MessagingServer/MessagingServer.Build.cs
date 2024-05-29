@@ -4,8 +4,10 @@ using UnrealBuildTool;
 
 public class MessagingServer : ModuleRules
 {
-	public MessagingServer(TargetInfo Target)
+	public MessagingServer(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
-	}
+		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "MessagingCommon" });
+    }
 }
